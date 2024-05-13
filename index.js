@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 class airportsWrapper {
 
@@ -31,21 +31,28 @@ class airportsWrapper {
         const url = method === 'POST' ? this.baseURL : this.constructURL(query);
 
         try {
-            const response = await fetch(url, {
+            const response = await axios({
                 method,
+                url,
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-api-key': this.APIKey
+                    'x-api-key': this.APIKey,
+                    'auth-mode': 'npm-package'
                 },
-                body: method === 'POST' ? JSON.stringify(query) : undefined
+                data: method === 'POST' ? query : undefined
             });
 
-            const data = await response.json();
+            const data = response.data;
             callback(null, data);
             return data;
         } catch (error) {
-            callback(error, null);
-            throw error;
+            if (error.response.data) {
+                callback(error.response.data, null);
+                throw error.response.data;
+            } else {
+                callback(error, null);
+                throw error;
+            }          
         }
     }
 
