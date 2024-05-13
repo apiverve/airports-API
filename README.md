@@ -44,10 +44,11 @@ Using the API client, you can perform requests to the API.
 
 ###### Define Query
 
+```
 var query = {
   "iata": "MCI",
 }
-
+```
 
 ###### Simple Request (using Callback)
 
