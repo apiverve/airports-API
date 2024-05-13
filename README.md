@@ -1,7 +1,7 @@
 Airports Lookup API
 ============
 
-`airports` Airports is a simple tool for getting airport data. It returns the airport name, location, and more.
+Airports is a simple tool for getting airport data. It returns the airport name, location, and more.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
@@ -18,13 +18,13 @@ This is a Javascript Wrapper for the [Airports Lookup API](https://apiverve.com/
 ## Configuration
 
 Before using the airports API client, you have to setup your account and obtain your API Key.  
-You can get it by signing up at [https://apiverve.com](https://apiverve.com).
+You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
 ## Usage
 
-The general API is documented here: [https://docs.apiverve.com/api/airports](https://docs.apiverve.com/api/airports).  
+The Airports Lookup API documentation is found here: [https://docs.apiverve.com/api/airports](https://docs.apiverve.com/api/airports).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -32,7 +32,7 @@ You can find parameters, example responses, and status codes documented here.
 ```
 var airportsAPI = require('@apiverve/airports');
 var api = new airportsAPI({
-    api_key: [API_KEY],
+    api_key: [YOUR_API_KEY],
     secure: true //(Optional, defaults to true)
 });
 ```
