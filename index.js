@@ -19,12 +19,22 @@ class airportsWrapper {
         this.APIKey = api_key;
         this.IsSecure = secure;
 
+        // secure is deprecated, all requests must be made over HTTPS
         this.baseURL = 'https://api.apiverve.com/v1/airports';
     }
 
     async execute(query, callback) {
         if (!query || typeof query !== 'object') {
             throw new Error('Query parameters must be provided as an object.');
+        }
+
+        var requiredParams = ["iata"];
+        if (requiredParams.length > 0) {
+            for (var i = 0; i < requiredParams.length; i++) {
+                if (!query[requiredParams[i]]) {
+                    throw new Error(`Required parameter [${requiredParams[i]}] is missing.`);
+                }
+            }
         }
 
         const method = 'GET';
