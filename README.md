@@ -1,4 +1,4 @@
-airports
+Airports Lookup API
 ============
 
 `airports` Airports is a simple tool for getting airport data. It returns the airport name, location, and more.
@@ -6,7 +6,7 @@ airports
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 
-This is a Node Javascript Wrapper for the [Airports Lookup API](https://apiverve.com/marketplace/api/airports)
+This is a Javascript Wrapper for the [Airports Lookup API](https://apiverve.com/marketplace/api/airports)
 
 ---
 
@@ -30,35 +30,37 @@ You can find parameters, example responses, and status codes documented here.
 ### Setup
 
 ```
-    var airportsAPI = require('@apiverve/airports');
-    var api = new airportsAPI({
-        api_key: [API_KEY],
-        secure: true //(Optional, defaults to true)
-    });
+var airportsAPI = require('@apiverve/airports');
+var api = new airportsAPI({
+    api_key: [API_KEY],
+    secure: true //(Optional, defaults to true)
+});
 ```
 
 ---
 
 
-## Perform Request
+### Perform Request
 Using the API client, you can perform requests to the API.
 
 ###### Define Query
 
+```
 var query = {
-  "iata": "MCI",
-}
-
+  "iata": "MCI"}
+```
 
 ###### Simple Request (using Callback)
 
-    api.execute(query, function (error, data) {
-        if (error) {
-            return console.error(error);
-        } else {
-            console.log(data);
-        }
-    });
+```
+api.execute(query, function (error, data) {
+    if (error) {
+        return console.error(error);
+    } else {
+        console.log(data);
+    }
+});
+```
 
 ###### Example Response
 
