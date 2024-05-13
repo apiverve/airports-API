@@ -29,12 +29,13 @@ You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
+```
     var airportsAPI = require('@apiverve/airports');
     var api = new airportsAPI({
         api_key: [API_KEY],
         secure: true //(Optional, defaults to true)
     });
-
+```
 
 ---
 
@@ -44,11 +45,10 @@ Using the API client, you can perform requests to the API.
 
 ###### Define Query
 
-```
 var query = {
   "iata": "MCI",
 }
-```
+
 
 ###### Simple Request (using Callback)
 
