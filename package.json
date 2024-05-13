@@ -1,11 +1,14 @@
 {
-  "name": "airports",
-  "version": "1",
+  "name": "@apiverve/airports",
+  "version": "1.0.0",
   "description": "Airports is a simple tool for getting airport data. It returns the airport name, location, and more.",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apiverve/airports.git"
+    "url": "git+https://github.com/apiverve/airports-API.git"
   },
   "keywords": [
     "airports"," airport data"," airport lookup"," airport api"," airport data api"," airport lookup api"," airport lookup data"," airport lookup tool"," airport lookup software"," airport lookup service"," airport lookup library"," airport lookup sdk"," airport lookup code"," airport lookup script"," airport lookup program"," airport lookup application"," airport lookup app"," airport lookup tool"," airport lookup utility"," airport lookup helper"," airport lookup helper tool"," airport lookup helper software"," airport lookup helper service"," airport lookup helper library"," airport lookup helper sdk"," airport lookup helper code"," airport lookup helper script"," airport lookup helper program"," airport lookup helper application"," airport lookup helper app"," airport lookup helper tool"," airport lookup helper utility"," airport lookup helper"
@@ -13,9 +16,9 @@
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/apiverve/airports/issues"
+    "url": "https://github.com/apiverve/airports-API/issues"
   },
-  "homepage": "https://github.com/apiverve/airports#readme",
+  "homepage": "https://github.com/apiverve/airports-API",
   "devDependencies": {
     "mocha": "^2.3.4",
     "chai": "^3.4.1",
