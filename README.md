@@ -47,7 +47,8 @@ Using the API client, you can perform requests to the API.
 
 ```
 var query = {
-  "iata": "MCI"}
+  iata: "MCI"
+}
 ```
 
 ###### Simple Request (using Callback)
